@@ -1,5 +1,4 @@
-/* Single source for the portfolio: lines (skills), stations (projects), service record.
-   Coordinates are map grid units (1 unit = 80px in the SVG). */
+/* Single source for the portfolio: lines (skills), stations (projects), ride order, service record. */
 window.PORTFOLIO = {
   person: {
     name: 'Yasser Eissa',
@@ -12,47 +11,39 @@ window.PORTFOLIO = {
       name: 'Web',
       ar: 'الويب',
       tech: 'Next.js 15 and 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Motion, three.js, Leaflet',
-      path: [[0.8, 2.3], [5.3, 2.3], [7.3, 4.3], [8.8, 5.8], [10.3, 4.3]],
     },
     M: {
       name: 'Mobile',
       ar: 'الموبايل',
       tech: 'React Native, Expo SDK 54 to 58, Expo Router, Reanimated, NFC, EAS updates',
-      path: [[7.187, 4.413], [8.8, 6.026], [10.413, 4.413]],
     },
     D: {
       name: 'Data',
       ar: 'البيانات',
       tech: 'PostgreSQL, Prisma, Supabase (Auth, row-level security, Realtime, PostGIS, edge functions), SQLite, Redis, Payload CMS',
-      path: [[3.8, 2.3], [3.8, 5.3], [6.3, 5.3], [7.3, 4.3], [10.3, 4.3]],
     },
     C: {
       name: 'Commerce',
       ar: 'التجارة',
       tech: 'Paymob checkout with signed webhooks, deposits and installments, ledgers and wallets, Shopify Liquid',
-      path: [[7.3, 6.8], [7.3, 4.3], [8.8, 2.8], [10.3, 4.3]],
     },
     A: {
       name: 'AI and media',
       ar: 'الذكاء الاصطناعي',
       tech: 'Anthropic API assistant with tools, Remotion programmatic video, ElevenLabs voice',
-      path: [[2.3, 2.3], [3.8, 0.8], [5.3, 2.3], [5.3, 4.3], [7.3, 4.3]],
     },
     J: {
       name: 'Joint service',
       ar: 'خدمة مشتركة',
       tech: 'Team projects for agency clients in the United States, built with a partner developer. Shopify, Next.js, Payload CMS.',
-      path: [[1.3, 6.8], [7.3, 6.8]],
     },
   },
 
-  /* Order = the "next station" order on the board. */
   stations: [
     {
       id: 'skyland', name: 'Sky Land', full: 'Sky Land Developments',
       kind: 'Real-estate landing site', role: 'Sole developer', when: '2026', status: 'Live',
       url: 'https://skylandeg.com', lines: ['W'],
-      x: 0.8, y: 2.3, marker: 'dot', label: { x: 0.8, y: 2.86, anchor: 'middle' },
       summary: 'Bilingual site for a developer selling VIVID, a villa compound in New Zayed, moved off an old PHP landing page.',
       points: [
         'English and Arabic (RTL) with separate root layouts per language.',
@@ -66,7 +57,6 @@ window.PORTFOLIO = {
       id: 'flamingo', name: 'FlamingoAtlas', full: 'FlamingoAtlas',
       kind: 'Game companion site in 6 languages', role: 'Sole developer', when: '2026 to now', status: 'Live',
       url: 'https://flamingoatlas.com', lines: ['W', 'A'],
-      x: 2.3, y: 2.3, marker: 'x', label: { x: 2.3, y: 2.9, anchor: 'middle' },
       summary: 'An unofficial launch guide: prices by country, store unlock times and editions, with every fact tagged by source.',
       points: [
         '40 routes in each of 6 languages, including Arabic, with hreflang and locale rewrites.',
@@ -80,7 +70,6 @@ window.PORTFOLIO = {
       id: 'video', name: 'Video Studio', full: 'Programmatic video studio',
       kind: 'Data-driven video pipelines', role: 'Sole developer', when: '2026', status: 'In use',
       url: '', lines: ['A'],
-      x: 3.8, y: 0.8, marker: 'dot', label: { x: 3.8, y: 0.42, anchor: 'middle' },
       summary: 'Code that turns data and scripts into finished vertical videos, so marketing content ships like software.',
       points: [
         '31 rendered Arabic videos for ElMasareef: 9 marketing stories and 22 character stories.',
@@ -94,7 +83,6 @@ window.PORTFOLIO = {
       id: 'masareef', name: 'ElMasareef', full: 'ElMasareef', ar: 'مصاريف',
       kind: 'School and university fee guide for Egypt', role: 'Sole developer', when: '2026 to now', status: 'Live',
       url: 'https://elmasareef.com', lines: ['W', 'A'],
-      x: 5.3, y: 2.3, marker: 'x', label: { x: 5.66, y: 2.0, anchor: 'start' }, arLabel: { x: 5.66, y: 2.3, anchor: 'start' },
       summary: 'An Arabic-first directory that lets parents compare private school and university fees, with sourced data.',
       points: [
         'Clustered campus map, near-me search that keeps location in the browser, and side-by-side compare.',
@@ -108,7 +96,6 @@ window.PORTFOLIO = {
       id: 'reponelle', name: 'Reponelle', full: 'Reponelle',
       kind: 'Online invitation maker with RSVP', role: 'Sole developer', when: '2026 to now', status: 'Live',
       url: 'https://reponelle.com', lines: ['W', 'D'],
-      x: 3.8, y: 2.3, marker: 'x', label: { x: 3.8, y: 1.84, anchor: 'middle' },
       summary: 'A SaaS where a host picks a design, builds an event and sends every guest a personal link.',
       points: [
         '77 designs and 12 locales including Arabic RTL, with localised email series.',
@@ -122,7 +109,6 @@ window.PORTFOLIO = {
       id: 'khashab', name: 'Khashab', full: 'Khashab Furniture', ar: 'خشب',
       kind: 'E-commerce and ERP platform', role: 'Sole developer', when: '2025 to now', status: 'Live',
       url: 'https://khashabfurniture.com', lines: ['W', 'M', 'D', 'C', 'A'],
-      x: 7.3, y: 4.3, marker: 'hub', label: { x: 7.3, y: 3.26, anchor: 'middle' }, arLabel: { x: 7.3, y: 3.6, anchor: 'middle' },
       summary: 'The whole software side of a custom-furniture maker in Cairo: store, checkout, customer portal and the staff back office.',
       points: [
         'Replaced a WordPress and WooCommerce store with a bilingual catalogue of about 208 products. Live since 4 October 2026.',
@@ -136,7 +122,6 @@ window.PORTFOLIO = {
       id: 'qready', name: 'QReady', full: 'QReady',
       kind: 'QR and NFC replacement for restaurant pagers', role: 'Sole developer', when: '2026', status: 'Prototype',
       url: '', lines: ['W', 'M'],
-      x: 8.8, y: 5.8, marker: 'cap', cy: 5.913, h: 44, label: { x: 8.8, y: 6.62, anchor: 'middle' },
       summary: 'Customers scan a code or tap a tag, enter their order number and get a push alert when the food is ready.',
       points: [
         'Live order board over Server-Sent Events.',
@@ -150,7 +135,6 @@ window.PORTFOLIO = {
       id: 'sanad', name: 'Sanad', full: 'Sanad', ar: 'سند',
       kind: 'Tow-truck marketplace for Egypt', role: 'Sole developer', when: '2026', status: 'Pre-launch',
       url: '', lines: ['W', 'M', 'D', 'C'],
-      x: 10.3, y: 4.3, marker: 'x', cx: 10.33, cy: 4.37, r: 17, label: { x: 10.62, y: 3.64, anchor: 'start' }, arLabel: { x: 10.62, y: 3.94, anchor: 'start' },
       summary: 'A customer app, a driver app and an operations dashboard in one monorepo, on a Supabase back end.',
       points: [
         'Dispatches jobs to drivers in waves with PostGIS and atomic offer matching.',
@@ -164,7 +148,6 @@ window.PORTFOLIO = {
       id: 'rolex', name: 'Date & Time', full: 'Date & Time, Official Rolex Retailer',
       kind: 'Rolex section on a Shopify store', role: 'Contributor (team)', when: '2025 to 2026', status: 'Live',
       url: 'https://dateandtimema.com', lines: ['C', 'J'],
-      x: 7.3, y: 6.8, marker: 'x', label: { x: 7.3, y: 7.36, anchor: 'middle' },
       summary: 'The Rolex area of a Massachusetts jeweller\'s Shopify store, built to Rolex\'s brand guidelines with a partner developer.',
       points: [
         '17 Rolex sections and about 40 templates across the model families.',
@@ -178,7 +161,6 @@ window.PORTFOLIO = {
       id: 'cosc', name: 'COSC', full: 'Comprehensive Orthopedic & Spine Care',
       kind: 'Medical practice site, Joomla to Next.js', role: 'Contributor (team)', when: '2026', status: 'Staging',
       url: '', lines: ['J'],
-      x: 5.8, y: 6.8, marker: 'joint', label: { x: 5.8, y: 7.3, anchor: 'middle' },
       summary: 'A New York and New Jersey surgical practice moved from Joomla to Next.js and Payload CMS.',
       points: [
         '441 legacy URLs preserved through a redirect map.',
@@ -191,7 +173,6 @@ window.PORTFOLIO = {
       id: 'ent', name: 'ENT Specialists', full: 'ENT Specialists',
       kind: 'Medical practice site, Wix to Next.js', role: 'Contributor (team)', when: '2026', status: 'Team project',
       url: '', lines: ['J'],
-      x: 4.3, y: 6.8, marker: 'joint', label: { x: 4.3, y: 7.3, anchor: 'middle' },
       summary: 'A four-office Massachusetts ENT practice rebuilt from Wix, with a blog on headless Payload CMS.',
       points: [
         '23 provider profiles, 17 service pages and 199 redirects for the cutover.',
@@ -204,7 +185,6 @@ window.PORTFOLIO = {
       id: 'execusource', name: 'ExecuSource', full: 'ExecuSource',
       kind: 'Recruiting firm site, WordPress to Next.js', role: 'Contributor (team)', when: '2026', status: 'Live',
       url: 'https://execusource.com', lines: ['J'],
-      x: 2.8, y: 6.8, marker: 'joint', label: { x: 2.8, y: 7.3, anchor: 'middle' },
       summary: 'An Atlanta staffing firm\'s site rebuilt from WordPress, with its job board rendered on the server.',
       points: [
         'About 192 open jobs read from Bullhorn and rendered where search engines can see them.',
@@ -217,7 +197,6 @@ window.PORTFOLIO = {
       id: 'pri', name: 'PRI Technology', full: 'PRI Technology',
       kind: 'IT staffing site on Payload CMS', role: 'Contributor (team)', when: '2026', status: 'Team project',
       url: '', lines: ['J'],
-      x: 1.3, y: 6.8, marker: 'joint', label: { x: 1.3, y: 7.3, anchor: 'middle' },
       summary: 'A New York IT staffing firm\'s site with live job listings from a JobDiva feed.',
       points: [
         'Staffing and advisory sub-sites with a switchable theme system.',
@@ -227,6 +206,10 @@ window.PORTFOLIO = {
       stats: [],
     },
   ],
+
+  /* The ride: solo builds in the order the train calls at them, then the team projects. */
+  ride: ['khashab', 'reponelle', 'masareef', 'flamingo', 'sanad', 'qready', 'skyland', 'video'],
+  joint: ['rolex', 'cosc', 'ent', 'execusource', 'pri'],
 
   depot: [
     ['Deploy', 'Docker, Coolify on a VPS, GitHub Actions to GHCR, Cloudflare R2 and Turnstile'],
