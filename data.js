@@ -1,4 +1,5 @@
-/* Single source for the portfolio: lines (skills), stations (projects), ride order, service record. */
+/* Single source for the portfolio: lines (skills), stations (projects), ride order, service record.
+   A station shows either a screenshot of the live site (shot) or the steps of how it works (flow). */
 window.PORTFOLIO = {
   person: {
     name: 'Yasser Abouelhassan',
@@ -21,7 +22,7 @@ window.PORTFOLIO = {
     },
     C: {
       name: 'Commerce',
-      tech: 'Paymob checkout with signed webhooks, deposits and installments, ledgers and wallets, Shopify Liquid',
+      tech: 'Paymob checkout with signed webhooks, Deposits and installments, Ledgers and wallets, Shopify Liquid',
     },
     A: {
       name: 'AI and media',
@@ -38,6 +39,7 @@ window.PORTFOLIO = {
       id: 'skyland', name: 'Sky Land', full: 'Sky Land Developments',
       kind: 'Real-estate landing site', role: 'Sole developer', when: '2026', status: 'Live',
       url: 'https://skylandeg.com', lines: ['W'],
+      shot: 'shots/skyland.webp',
       summary: 'Bilingual site for a developer selling VIVID, a villa compound in New Zayed, moved off an old PHP landing page.',
       points: [
         'English and Arabic (RTL) with separate root layouts per language.',
@@ -51,6 +53,7 @@ window.PORTFOLIO = {
       id: 'flamingo', name: 'FlamingoAtlas', full: 'FlamingoAtlas',
       kind: 'Game companion site in 6 languages', role: 'Sole developer', when: '2026 to now', status: 'Live',
       url: 'https://flamingoatlas.com', lines: ['W', 'A'],
+      shot: 'shots/flamingo.webp',
       summary: 'An unofficial launch guide: prices by country, store unlock times and editions, with every fact tagged by source.',
       points: [
         '40 routes in each of 6 languages, including Arabic, with hreflang and locale rewrites.',
@@ -64,6 +67,7 @@ window.PORTFOLIO = {
       id: 'video', name: 'Video Studio', full: 'Programmatic video studio',
       kind: 'Data-driven video pipelines', role: 'Sole developer', when: '2026', status: 'In use',
       url: '', lines: ['A'],
+      flow: ['Data and script', 'Checked composition', 'Voice-over', 'Render', '1080×1920 video'],
       summary: 'Code that turns data and scripts into finished vertical videos, so marketing content ships like software.',
       points: [
         '31 rendered Arabic videos for ElMasareef: 9 marketing stories and 22 character stories.',
@@ -77,6 +81,7 @@ window.PORTFOLIO = {
       id: 'masareef', name: 'ElMasareef', full: 'ElMasareef',
       kind: 'School and university fee guide for Egypt', role: 'Sole developer', when: '2026 to now', status: 'Live',
       url: 'https://elmasareef.com', lines: ['W', 'A'],
+      shot: 'shots/masareef.webp',
       summary: 'An Arabic-first directory that lets parents compare private school and university fees, with sourced data.',
       points: [
         'Clustered campus map, near-me search that keeps location in the browser, and side-by-side compare.',
@@ -90,6 +95,7 @@ window.PORTFOLIO = {
       id: 'reponelle', name: 'Reponelle', full: 'Reponelle',
       kind: 'Online invitation maker with RSVP', role: 'Sole developer', when: '2026 to now', status: 'Live',
       url: 'https://reponelle.com', lines: ['W', 'D'],
+      shot: 'shots/reponelle.webp',
       summary: 'A SaaS where a host picks a design, builds an event and sends every guest a personal link.',
       points: [
         '77 designs and 12 locales including Arabic RTL, with localised email series.',
@@ -103,6 +109,7 @@ window.PORTFOLIO = {
       id: 'khashab', name: 'Khashab', full: 'Khashab Furniture',
       kind: 'E-commerce and ERP platform', role: 'Sole developer', when: '2025 to now', status: 'Live',
       url: 'https://khashabfurniture.com', lines: ['W', 'M', 'D', 'C', 'A'],
+      shot: 'shots/khashab.webp',
       summary: 'The whole software side of a custom-furniture maker in Cairo: store, checkout, customer portal and the staff back office.',
       points: [
         'Replaced a WordPress and WooCommerce store with a bilingual catalogue of about 208 products. Live since 4 October 2026.',
@@ -116,6 +123,7 @@ window.PORTFOLIO = {
       id: 'qready', name: 'QReady', full: 'QReady',
       kind: 'QR and NFC replacement for restaurant pagers', role: 'Sole developer', when: '2026', status: 'Prototype',
       url: '', lines: ['W', 'M'],
+      flow: ['Scan QR or tap NFC', 'Enter order number', 'Live order board', 'Push alert'],
       summary: 'Customers scan a code or tap a tag, enter their order number and get a push alert when the food is ready.',
       points: [
         'Live order board over Server-Sent Events.',
@@ -129,6 +137,7 @@ window.PORTFOLIO = {
       id: 'sanad', name: 'Sanad', full: 'Sanad',
       kind: 'Tow-truck marketplace for Egypt', role: 'Sole developer', when: '2026', status: 'Pre-launch',
       url: '', lines: ['W', 'M', 'D', 'C'],
+      flow: ['Quote', 'Dispatch in waves', 'Live tracking', 'PIN hand-over', 'Settlement'],
       summary: 'A customer app, a driver app and an operations dashboard in one monorepo, on a Supabase back end.',
       points: [
         'Dispatches jobs to drivers in waves with PostGIS and atomic offer matching.',

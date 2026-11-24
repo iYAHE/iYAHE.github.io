@@ -10,19 +10,23 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Yasser Abouelhassan · Full-stack developer">
 <meta property="og:description" content="Every stop on this line is something I built.">
+<meta property="og:image" content="https://iyahe.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#13203B">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23D62839' stroke-width='6'/%3E%3Crect x='1' y='12' width='30' height='8' rx='2' fill='%2313203B'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Readex+Pro:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=4">
 <script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body id="top">
 <a class="skip" href="#main">Skip to content</a>
 
 <!-- The carriage: nameplate, the next-stop display, and the strip map above the doors. -->
-<header class="car">
+<header class="car" id="car">
   <div class="wrap car-in">
     <a class="plate" href="#top" aria-label="Yasser Abouelhassan, back to the start">
       <span class="roundel" aria-hidden="true"><span>YA</span></span>
@@ -35,17 +39,21 @@
       <a href="cv.html">CV</a>
       <a href="#ticket">Contact</a>
     </nav>
-    <button class="theme" id="theme" type="button" aria-pressed="false">Night service</button>
+    <button class="theme" id="theme" type="button">
+      <svg class="ico ico-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z"/></svg>
+      <svg class="ico ico-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.3 5.3 7 7M17 17l1.7 1.7M18.7 5.3 17 7M7 17l-1.7 1.7"/></svg>
+      <span class="theme-t" id="theme-t">Night service</span>
+    </button>
   </div>
   <div class="wrap"><ol class="strip" id="strip" aria-label="Jump to a stop"></ol></div>
 </header>
 
 <main id="main">
 
-<section class="hall wrap" aria-labelledby="hall-h">
+<section class="hall wrap" id="hall" aria-labelledby="hall-h">
   <div class="hall-copy">
     <p class="eyebrow">Full-stack app and web developer · Cairo</p>
-    <h1 id="hall-h">Every stop on this line is something I&nbsp;built.</h1>
+    <h1 id="hall-h">Every stop on <span class="hl">this line</span> is something I&nbsp;built.</h1>
     <p class="lede">I'm Yasser Abouelhassan. I take products from database schema to production: Next.js on the web, React Native on the phone, PostgreSQL underneath, and the deployment that keeps it running.</p>
     <div class="cta">
       <a class="btn" href="#stop-khashab">Start the ride <span aria-hidden="true">↓</span></a>
@@ -58,9 +66,14 @@
       <li><b>4</b> live products I run</li>
       <li><b>2</b> languages by default, Arabic and English</li>
     </ul>
+    <div class="legend">
+      <span class="legend-k">Lines</span>
+      <ul id="legend" aria-label="Skills, by line colour"></ul>
+      <a class="link" href="#skills">Skills in full</a>
+    </div>
   </div>
   <div class="route-card" id="route">
-    <p class="route-head"><span>Route</span><span>Pick a stop to jump to it</span></p>
+    <p class="route-head"><span>Route</span><span>Pick a stop<span class="keys">, or use the ← → keys</span></span></p>
     <ol class="route" id="route-list"></ol>
   </div>
 </section>
@@ -78,6 +91,19 @@
           <circle class="t-lamp" cx="22" cy="60" r="1.6"/>
         </svg>
       </div>
+    </div>
+
+    <!-- Step controls: they ride on the track, at the bottom of the screen. -->
+    <div class="rail-dock">
+      <nav class="dock" id="dock" aria-label="Step through the stops">
+        <button type="button" id="dock-prev" aria-label="Previous stop" title="Previous stop (left arrow key)">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 14.5 12 8.5l6 6"/></svg>
+        </button>
+        <span class="dock-n" id="dock-n" aria-hidden="true">01</span>
+        <button type="button" id="dock-next" aria-label="Next stop" title="Next stop (right arrow key)">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 9.5l6 6 6-6"/></svg>
+        </button>
+      </nav>
     </div>
 
     <div id="stops"></div>
@@ -99,6 +125,10 @@
 <div class="wrap terminus">
   <p class="term-sign">Terminus</p>
   <p class="term-copy">This train terminates here. Next on the concourse: my skills line by line, the service record, and how to reach me.</p>
+  <div class="cta">
+    <a class="btn" href="#ticket">Get in touch</a>
+    <a class="btn ghost" href="cv.html">Read the CV</a>
+  </div>
 </div>
 
 <section class="wrap block" id="skills" aria-labelledby="skills-h">
@@ -138,7 +168,7 @@
       <dl>
         <div><dt>Issued in</dt><dd>Cairo, Egypt</dd></div>
         <div><dt>Class</dt><dd>Full-stack</dd></div>
-        <div><dt>Code</dt><dd><a href="https://github.com/iYAHE" rel="noopener">github.com/iYAHE</a></dd></div>
+        <div><dt>Code</dt><dd><a href="https://github.com/iYAHE" target="_blank" rel="noopener">github.com/iYAHE</a></dd></div>
         <div><dt>Papers</dt><dd><a href="cv.html">CV</a> · <a href="Yasser-Abouelhassan-CV.pdf" download>PDF</a></dd></div>
       </dl>
       <div class="barcode" aria-hidden="true"></div>
@@ -154,7 +184,7 @@
 </footer>
 
 <noscript><p class="wrap noscript">The ride needs JavaScript. The full project list is in the <a href="cv.html">CV</a>.</p></noscript>
-<script src="data.js"></script>
-<script src="app.js"></script>
+<script src="data.js?v=4"></script>
+<script src="app.js?v=4"></script>
 </body>
 </html>
