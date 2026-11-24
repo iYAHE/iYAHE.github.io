@@ -146,7 +146,7 @@ window.PORTFOLIO = {
     },
     {
       id: 'rolex', name: 'Date & Time', full: 'Date & Time, Official Rolex Retailer',
-      kind: 'Rolex section on a Shopify store', role: 'Contributor (team)', when: '2025 to 2026', status: 'Live',
+      kind: 'Rolex section on a Shopify store', role: 'Contributor (team)', when: '2022 to 2026', status: 'Live',
       url: 'https://dateandtimema.com', lines: ['C', 'J'],
       summary: 'The Rolex area of a Massachusetts jeweller\'s Shopify store, built to Rolex\'s brand guidelines with a partner developer.',
       points: [
@@ -220,9 +220,11 @@ window.PORTFOLIO = {
   ],
 
   record: [
-    ['Earlier', 'B.Sc. in Computer Science at the American University of Sharjah. Internship at Netways on camera apps built on an object detector. Military service.'],
+    ['2020', 'Internship at Netways on camera apps built on an object detector.'],
+    ['2021', 'B.Sc. in Computer Science, American University of Sharjah.'],
+    ['2022', 'Freelance work starts with the Rolex section for Date & Time (Shopify).'],
+    ['2023 to 2024', 'Military service.'],
     ['2025', 'Joined Khashab Furniture and built its first website.'],
-    ['Apr 2025', 'First commits on the Rolex section for Date & Time (Shopify).'],
     ['Oct 2025', 'Khashab admin panel in PHP, issuing bilingual PDF job orders.'],
     ['Apr 2026', 'Khashab admin app in Expo for customers, orders and transactions.'],
     ['Jun 2026', 'Agency rebuilds start: ENT Specialists and ExecuSource, then PRI Technology and COSC.'],
