@@ -220,6 +220,8 @@ window.PORTFOLIO = {
   ],
 
   record: [
+    ['Earlier', 'B.Sc. in Computer Science at the American University of Sharjah. Internship at Netways on camera apps built on an object detector. Military service.'],
+    ['2025', 'Joined Khashab Furniture and built its first website.'],
     ['Apr 2025', 'First commits on the Rolex section for Date & Time (Shopify).'],
     ['Oct 2025', 'Khashab admin panel in PHP, issuing bilingual PDF job orders.'],
     ['Apr 2026', 'Khashab admin app in Expo for customers, orders and transactions.'],
