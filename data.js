@@ -18,13 +18,13 @@ window.PORTFOLIO = {
       name: 'Mobile',
       ar: 'الموبايل',
       tech: 'React Native, Expo SDK 54 to 58, Expo Router, Reanimated, NFC, EAS updates',
-      path: [[7.187, 4.413], [8.8, 6.026], [10.366, 4.46], [12.3, 4.46]],
+      path: [[7.187, 4.413], [8.8, 6.026], [10.413, 4.413]],
     },
     D: {
       name: 'Data',
       ar: 'البيانات',
       tech: 'PostgreSQL, Prisma, Supabase (Auth, row-level security, Realtime, PostGIS, edge functions), SQLite, Redis, Payload CMS',
-      path: [[3.8, 2.3], [3.8, 5.3], [6.3, 5.3], [7.3, 4.3], [10.3, 4.3], [12.3, 4.3]],
+      path: [[3.8, 2.3], [3.8, 5.3], [6.3, 5.3], [7.3, 4.3], [10.3, 4.3]],
     },
     C: {
       name: 'Commerce',
@@ -161,20 +161,6 @@ window.PORTFOLIO = {
       stats: [['3', 'apps'], ['~65', 'tables'], ['222', 'tests']],
     },
     {
-      id: 'elite', name: 'Elite Clubhouse', full: 'Elite Clubhouse',
-      kind: 'Member app and website for a private club', role: 'Sole developer', when: '2026', status: 'Pre-launch',
-      url: '', lines: ['M', 'D'],
-      x: 12.3, y: 4.3, marker: 'cap', cy: 4.38, h: 39, label: { x: 12.3, y: 3.86, anchor: 'middle' },
-      summary: 'An Arabic-first member app for a club in Sheikh Zayed, with an 11-page bilingual website.',
-      points: [
-        'Digital membership card with a check-in QR code that rotates every 30 seconds.',
-        'Activity booking with live places left, and shareable guest passes.',
-        'Every write goes through SQL functions behind row-level security, tested on in-process Postgres.',
-      ],
-      stack: ['Expo SDK 58', 'React Native', 'TypeScript', 'Supabase', 'Phone OTP', 'PGlite'],
-      stats: [['11', 'SQL functions'], ['22', 'database tests']],
-    },
-    {
       id: 'rolex', name: 'Date & Time', full: 'Date & Time, Official Rolex Retailer',
       kind: 'Rolex section on a Shopify store', role: 'Contributor (team)', when: '2025 to 2026', status: 'Live',
       url: 'https://dateandtimema.com', lines: ['C', 'J'],
@@ -258,6 +244,5 @@ window.PORTFOLIO = {
     ['Sep 2026', 'Khashab rebuild on Next.js begins. Reponelle, Sky Land and Sanad start the same month.'],
     ['4 Oct 2026', 'Khashab goes live. Paymob checkout, the AI assistant and the finance module follow within two weeks.'],
     ['Oct 2026', 'First commits on ElMasareef and FlamingoAtlas. QReady prototype.'],
-    ['Nov 2026', 'Elite Clubhouse member app and website.'],
   ],
 };

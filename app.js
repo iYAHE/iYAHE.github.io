@@ -275,6 +275,6 @@
   const scroller = svg.parentElement;
   if (scroller.scrollWidth > scroller.clientWidth) {
     const hub = D.stations.find((s) => s.id === 'khashab');
-    scroller.scrollLeft = (hub.x * U / 1064) * scroller.scrollWidth - scroller.clientWidth / 2;
+    scroller.scrollLeft = (hub.x * U / 936) * scroller.scrollWidth - scroller.clientWidth / 2;
   }
 })();
