@@ -1,7 +1,7 @@
 /* Single source for the portfolio: lines (skills), stations (projects), ride order, service record. */
 window.PORTFOLIO = {
   person: {
-    name: 'Yasser Eissa',
+    name: 'Yasser Abouelhassan',
     email: 'yassereissa1308@gmail.com',
     github: 'https://github.com/iYAHE',
   },
@@ -9,32 +9,26 @@ window.PORTFOLIO = {
   lines: {
     W: {
       name: 'Web',
-      ar: 'الويب',
       tech: 'Next.js 15 and 16 (App Router), React 19, TypeScript, Tailwind CSS 4, Motion, three.js, Leaflet',
     },
     M: {
       name: 'Mobile',
-      ar: 'الموبايل',
       tech: 'React Native, Expo SDK 54 to 58, Expo Router, Reanimated, NFC, EAS updates',
     },
     D: {
       name: 'Data',
-      ar: 'البيانات',
       tech: 'PostgreSQL, Prisma, Supabase (Auth, row-level security, Realtime, PostGIS, edge functions), SQLite, Redis, Payload CMS',
     },
     C: {
       name: 'Commerce',
-      ar: 'التجارة',
       tech: 'Paymob checkout with signed webhooks, deposits and installments, ledgers and wallets, Shopify Liquid',
     },
     A: {
       name: 'AI and media',
-      ar: 'الذكاء الاصطناعي',
       tech: 'Anthropic API assistant with tools, Remotion programmatic video, ElevenLabs voice',
     },
     J: {
       name: 'Joint service',
-      ar: 'خدمة مشتركة',
       tech: 'Team projects for agency clients in the United States, built with a partner developer. Shopify, Next.js, Payload CMS.',
     },
   },
@@ -80,7 +74,7 @@ window.PORTFOLIO = {
       stats: [['31', 'videos for one brand'], ['1080×1920', '30 fps']],
     },
     {
-      id: 'masareef', name: 'ElMasareef', full: 'ElMasareef', ar: 'مصاريف',
+      id: 'masareef', name: 'ElMasareef', full: 'ElMasareef',
       kind: 'School and university fee guide for Egypt', role: 'Sole developer', when: '2026 to now', status: 'Live',
       url: 'https://elmasareef.com', lines: ['W', 'A'],
       summary: 'An Arabic-first directory that lets parents compare private school and university fees, with sourced data.',
@@ -106,7 +100,7 @@ window.PORTFOLIO = {
       stats: [['12', 'languages'], ['77', 'designs'], ['290', 'tests']],
     },
     {
-      id: 'khashab', name: 'Khashab', full: 'Khashab Furniture', ar: 'خشب',
+      id: 'khashab', name: 'Khashab', full: 'Khashab Furniture',
       kind: 'E-commerce and ERP platform', role: 'Sole developer', when: '2025 to now', status: 'Live',
       url: 'https://khashabfurniture.com', lines: ['W', 'M', 'D', 'C', 'A'],
       summary: 'The whole software side of a custom-furniture maker in Cairo: store, checkout, customer portal and the staff back office.',
@@ -132,7 +126,7 @@ window.PORTFOLIO = {
       stats: [],
     },
     {
-      id: 'sanad', name: 'Sanad', full: 'Sanad', ar: 'سند',
+      id: 'sanad', name: 'Sanad', full: 'Sanad',
       kind: 'Tow-truck marketplace for Egypt', role: 'Sole developer', when: '2026', status: 'Pre-launch',
       url: '', lines: ['W', 'M', 'D', 'C'],
       summary: 'A customer app, a driver app and an operations dashboard in one monorepo, on a Supabase back end.',

@@ -10,7 +10,6 @@
   const ride = D.ride.map((id) => byId[id]);
   const joint = D.joint.map((id) => byId[id]);
 
-  const arName = (s) => (s.ar ? ` <span class="ar" lang="ar" dir="rtl">${esc(s.ar)}</span>` : '');
   const pill = (s) => {
     const cls = s.status === 'Live' || s.status === 'In use' ? ' pill-live'
       : s.status === 'Pre-launch' || s.status === 'Prototype' ? ' pill-build' : '';
@@ -23,7 +22,7 @@
     <li><a href="#stop-${s.id}">
       <span class="r-dot" aria-hidden="true"></span>
       <span class="r-n">${pad(i + 1)}</span>
-      <span class="r-name"><b>${esc(s.full)}${arName(s)}</b><small>${esc(s.kind)}</small></span>
+      <span class="r-name"><b>${esc(s.full)}</b><small>${esc(s.kind)}</small></span>
       ${pill(s)}
     </a></li>`).join('') + `
     <li class="j"><a href="#joint">
@@ -61,7 +60,7 @@
         </p>
         <div class="sign rv" style="--i:1">
           <span class="mk" aria-hidden="true"></span>
-          <h2 id="h-${s.id}">${esc(s.full)}${arName(s)}</h2>
+          <h2 id="h-${s.id}">${esc(s.full)}</h2>
         </div>
         <p class="stop-kind rv" style="--i:2">${esc(s.kind)}</p>
         <ul class="xchg rv" style="--i:2" aria-label="Skills used">${s.lines.map((l) =>
@@ -109,7 +108,7 @@
     return `<article class="line-row line-${id}">
       <span class="rd rd-${id} rd-lg" aria-hidden="true">${id}</span>
       <div class="line-body">
-        <h3>${esc(L.name)} line <span class="ar" lang="ar" dir="rtl">${esc(L.ar)}</span></h3>
+        <h3>${esc(L.name)} line</h3>
         <p>${esc(L.tech)}</p>
         <p class="serves"><span>Calls at</span> ${served}</p>
       </div>

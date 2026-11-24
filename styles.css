@@ -58,7 +58,6 @@ ul, ol, dl, dd { margin: 0; padding: 0; }
 ul, ol { list-style: none; }
 button { font: inherit; color: inherit; cursor: pointer; }
 :focus-visible { outline: 3px solid var(--m); outline-offset: 3px; border-radius: 4px; }
-.ar { font-family: var(--display); font-weight: 500; }
 
 .wrap {
   width: 100%;
@@ -86,7 +85,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   padding: 4px 0 3px; border-radius: 2px;
 }
 .plate-name { font: 600 1rem/1.2 var(--display); display: flex; gap: 10px; align-items: baseline; white-space: nowrap; }
-.plate-name .ar { color: var(--muted); font-size: 0.95rem; }
 
 /* The next-stop display: amber on black in both themes, like the sign in a carriage. */
 .led {
@@ -196,7 +194,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .r-n { font: 500 0.74rem/1 var(--mono); color: var(--muted); }
 .r-name { display: grid; min-width: 0; }
 .r-name b { font: 600 1rem/1.25 var(--display); }
-.r-name b .ar { color: var(--muted); font-size: 0.92rem; margin-inline-start: 4px; }
 .r-name small { font-size: 0.8rem; line-height: 1.35; color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 .pill {
@@ -264,7 +261,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   line-height: 0.98;
   letter-spacing: -0.035em;
 }
-.sign h2 .ar { font-size: 0.5em; font-weight: 500; letter-spacing: 0; color: var(--muted); margin-inline-start: 0.2em; white-space: nowrap; }
 .mk {
   position: absolute; z-index: 2;
   left: calc(var(--tx) + var(--tw) / 2 - var(--mk) / 2 - var(--gut));
@@ -360,7 +356,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .lines { display: grid; border-top: 1px solid var(--rule); }
 .line-row { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 18px; padding-block: 18px; border-bottom: 1px solid var(--rule); }
 .line-body h3 { font-size: 1.12rem; font-weight: 600; display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; }
-.line-body h3 .ar { color: var(--muted); font-size: 0.95rem; }
 .line-body p { margin-top: 4px; max-width: 78ch; }
 .serves { font: 400 0.8rem/1.5 var(--mono); color: var(--muted); }
 .serves span { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.7rem; margin-right: 6px; }
