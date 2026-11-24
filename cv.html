@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yasser Eissa · CV</title>
+<meta name="description" content="CV of Yasser Eissa, full-stack app and web developer in Cairo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Readex+Pro:wght@500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<style>
+  :root {
+    --ink: #13203B; --muted: #56637C; --rule: #CBD3DE; --paper: #EDF0F4; --sheet: #FFFFFF;
+    --w: #D62839; --m: #1668C9; --d: #E88A00; --c: #0C9A6B; --a: #7A3FC2;
+    --display: 'Readex Pro', 'Segoe UI', system-ui, sans-serif;
+    --body: 'Public Sans', 'Segoe UI', system-ui, sans-serif;
+    --mono: 'Spline Sans Mono', ui-monospace, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 400 9.6pt/1.45 var(--body); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .bar { max-width: 210mm; margin: 0 auto; padding: 14px 16px; display: flex; gap: 10px; justify-content: space-between; align-items: center; font: 500 0.85rem/1 var(--mono); }
+  .bar a { color: var(--ink); }
+  .bar button { font: 600 0.85rem/1 var(--display); background: var(--ink); color: #fff; border: 0; border-radius: 8px; padding: 10px 16px; cursor: pointer; }
+  .page { background: var(--sheet); max-width: 210mm; margin: 0 auto 32px; padding: 14mm 15mm 12mm; border: 1px solid var(--rule); }
+  .strip { display: grid; grid-template-columns: repeat(5, 1fr); height: 5px; margin-bottom: 9mm; }
+  .strip i:nth-child(1) { background: var(--w); } .strip i:nth-child(2) { background: var(--m); }
+  .strip i:nth-child(3) { background: var(--d); } .strip i:nth-child(4) { background: var(--c); } .strip i:nth-child(5) { background: var(--a); }
+  h1, h2, h3 { font-family: var(--display); margin: 0; }
+  h1 { font-size: 25pt; font-weight: 700; letter-spacing: -0.02em; line-height: 1; }
+  .title { font: 500 11.5pt/1.3 var(--display); margin-top: 5px; }
+  .contact { display: flex; flex-wrap: wrap; gap: 3px 16px; margin-top: 8px; font: 400 8.6pt/1.4 var(--mono); color: var(--muted); }
+  .contact a { color: inherit; text-decoration: none; }
+  h2 { font-size: 9pt; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--w); margin: 7mm 0 2.6mm; padding-bottom: 1.4mm; border-bottom: 1px solid var(--rule); }
+  p { margin: 0; }
+  .profile { max-width: 172mm; }
+  .skills { display: grid; grid-template-columns: 31mm 1fr; gap: 1.5mm 4mm; margin: 0; }
+  .skills dt { font: 500 8.2pt/1.6 var(--mono); color: var(--muted); }
+  .skills dd { margin: 0; }
+  .proj { margin-top: 3.4mm; break-inside: avoid; }
+  .proj:first-of-type { margin-top: 0; }
+  .proj-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 12px; align-items: baseline; }
+  h3 { font-size: 10.6pt; font-weight: 600; }
+  h3 a { color: inherit; text-decoration: none; }
+  .when { font: 400 8.2pt/1.4 var(--mono); color: var(--muted); }
+  .stack { font: 400 8pt/1.5 var(--mono); color: var(--muted); margin-top: 0.5mm; }
+  ul { margin: 1mm 0 0; padding-left: 4.2mm; }
+  li { margin-top: 0.6mm; }
+  li::marker { color: var(--w); }
+  .small li { margin-top: 0.9mm; }
+  .role { margin-top: 2.6mm; break-inside: avoid; }
+  .role:first-of-type { margin-top: 0; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10mm; }
+  @page { size: A4; margin: 10mm 14mm; }
+  @media print {
+    body { background: #fff; font-size: 9.1pt; line-height: 1.4; }
+    h2 { margin: 5mm 0 2.2mm; }
+    .proj { margin-top: 2.6mm; }
+    .bar { display: none; }
+    .page { border: 0; margin: 0; max-width: none; padding: 0; }
+    .strip { margin-bottom: 7mm; }
+    h2 { break-after: avoid; }
+  }
+  @media (max-width: 640px) {
+    .page { padding: 22px 16px; }
+    .skills, .two { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="bar">
+  <a href="index.html">← Back to the network map</a>
+  <span style="display:flex;gap:14px;align-items:center">
+    <a href="Yasser-Eissa-CV.pdf" download>Download PDF</a>
+    <button type="button" onclick="window.print()">Print</button>
+  </span>
+</div>
+
+<main class="page">
+  <div class="strip" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+  <header>
+    <h1>Yasser Eissa</h1>
+    <p class="title">Full-stack app and web developer</p>
+    <p class="contact">
+      <span>Cairo, Egypt</span>
+      <a href="mailto:yassereissa1308@gmail.com">yassereissa1308@gmail.com</a>
+      <a href="https://iyahe.github.io">iyahe.github.io</a>
+      <a href="https://github.com/iYAHE">github.com/iYAHE</a>
+      <!-- Add your phone number here:
+      <span>+20 ...</span> -->
+    </p>
+  </header>
+
+  <h2>Profile</h2>
+  <p class="profile">Full-stack developer who takes products from an empty repository to production: database schema, API, web and mobile UI, payments, deployment and SEO. Since 2025 I have built and launched a bilingual e-commerce and ERP platform, a 12-language SaaS, two data-driven content sites, and React Native apps backed by Supabase. I work Arabic-first when the market needs it, and I ship with tests, CI and Docker deployments I run myself.</p>
+
+  <h2>Technical skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>TypeScript, JavaScript, SQL, PHP, HTML, CSS, Shopify Liquid</dd>
+    <dt>Web</dt><dd>Next.js 15 and 16 (App Router), React 19, Tailwind CSS 4, Motion, three.js, Leaflet</dd>
+    <dt>Mobile</dt><dd>React Native, Expo (SDK 54 to 58), Expo Router, Reanimated, NFC, EAS updates</dd>
+    <dt>Back end, data</dt><dd>Node.js, PostgreSQL, Prisma, Supabase (Auth, row-level security, Realtime, PostGIS, edge functions), SQLite, Redis, Payload CMS 3</dd>
+    <dt>Integrations</dt><dd>Google, Facebook and Apple OAuth, phone OTP, Paymob checkout with signed webhooks, Web Push, SMTP and IMAP email, WhatsApp webhooks, Anthropic API</dd>
+    <dt>Infrastructure</dt><dd>Docker, Coolify on a VPS, GitHub Actions to GHCR, Cloudflare R2 and Turnstile</dd>
+    <dt>Quality, SEO</dt><dd>Node test runner, Vitest, PGlite database tests; hreflang, JSON-LD, redirect maps, IndexNow, GA4, Search Console API</dd>
+    <dt>Human languages</dt><dd>Arabic (native), English (professional)</dd>
+  </dl>
+
+  <h2>Selected projects</h2>
+
+  <section class="proj">
+    <div class="proj-head"><h3><a href="https://khashabfurniture.com">Khashab Furniture: e-commerce and ERP platform</a></h3><span class="when">Sole developer · Sep 2026 to present · khashabfurniture.com</span></div>
+    <p class="stack">Next.js 16 · React 19 · TypeScript · PostgreSQL · Prisma · Payload CMS · Redis · Cloudflare R2 · Docker · GitHub Actions</p>
+    <ul>
+      <li>Replaced a WordPress and WooCommerce store with a bilingual (English, Arabic RTL) catalogue of about 208 products. Launched 4 October 2026 with a full redirect map.</li>
+      <li>Built Paymob deposit checkout with HMAC-verified webhooks, a customer portal that tracks custom orders through 7 production stages, and a 3D cabinet designer (three.js) with price estimates.</li>
+      <li>Built the staff back office: role-based admin with an audit log, and a finance module for contracts, installments, ledgers and quotations.</li>
+      <li>Added an AI shopping assistant on the Anthropic API that answers from the live catalogue through tools.</li>
+      <li>54 data models, about 818 automated tests, 106 merged pull requests. Each merge is tested, published and live in about 10 minutes.</li>
+    </ul>
+  </section>
+
+  <section class="proj">
+    <div class="proj-head"><h3><a href="https://reponelle.com">Reponelle: online invitation maker with RSVP</a></h3><span class="when">Sole developer · Sep 2026 to present · reponelle.com</span></div>
+    <p class="stack">Next.js 15 · React 19 · TypeScript · PostgreSQL · custom auth with Google and Facebook OAuth · Docker</p>
+    <ul>
+      <li>SaaS where hosts pick one of 77 designs, build an event and send each guest a personal link with RSVP, countdown and calendar file.</li>
+      <li>Runs in 12 locales including Arabic RTL, with localised email series and one-click unsubscribe.</li>
+      <li>Admin dashboard for funnel, countries, RSVP analytics, an IMAP inbox and newsletters. About 290 tests.</li>
+    </ul>
+  </section>
+
+  <section class="proj">
+    <div class="proj-head"><h3><a href="https://elmasareef.com">ElMasareef: school and university fee guide for Egypt</a></h3><span class="when">Sole developer · Oct 2026 to present · elmasareef.com</span></div>
+    <p class="stack">Next.js 16 · TypeScript · SQLite · Leaflet · Search Console API · Docker</p>
+    <ul>
+      <li>Arabic-first directory of 486 schools and 66 universities with a clustered campus map, near-me search, compare and programmatic SEO pages.</li>
+      <li>Admin CMS for institutions and fee sources, admission leads synced to Google Sheets, review and forum moderation.</li>
+    </ul>
+  </section>
+
+  <section class="proj">
+    <div class="proj-head"><h3><a href="https://flamingoatlas.com">FlamingoAtlas: game companion site in 6 languages</a></h3><span class="when">Sole developer · Oct 2026 to present · flamingoatlas.com</span></div>
+    <p class="stack">Next.js 16 · TypeScript · SQLite · Web Push · Nodemailer · Remotion</p>
+    <ul>
+      <li>40 routes in each of 6 languages, prices for 63 countries, every fact tagged by source. Push and double opt-in email alerts.</li>
+      <li>A video pipeline renders short clips in 6 languages from the site's own data.</li>
+    </ul>
+  </section>
+
+  <section class="proj">
+    <div class="proj-head"><h3>Sanad: tow-truck marketplace for Egypt</h3><span class="when">Sole developer · 2026 · pre-launch</span></div>
+    <p class="stack">Turborepo · Expo · React Native · Next.js 16 · Supabase (Postgres 17, PostGIS, RLS, Realtime, edge functions) · Paymob</p>
+    <ul>
+      <li>Customer app, driver app and operations dashboard. Jobs are dispatched to drivers in waves with PostGIS and atomic offer matching, then live tracking and PIN hand-over.</li>
+      <li>Server-side quotes, an append-only ledger, wallets and settlements. About 65 tables and 222 tests.</li>
+    </ul>
+  </section>
+
+  <section class="proj">
+    <div class="proj-head"><h3>Elite Clubhouse: member app and website</h3><span class="when">Sole developer · Nov 2026 · pre-launch</span></div>
+    <p class="stack">Expo SDK 58 · React Native · TypeScript · Supabase (phone OTP, RLS, SQL functions)</p>
+    <ul>
+      <li>Digital membership card with a check-in QR code that rotates every 30 seconds, activity booking with live places left, and guest passes.</li>
+      <li>All writes go through SQL functions behind row-level security, covered by 22 database tests. Bilingual 11-page website alongside.</li>
+    </ul>
+  </section>
+
+  <h2>Also built</h2>
+  <ul class="small">
+    <li><b>QReady</b> (2026): QR and NFC replacement for restaurant pagers with Web Push alerts. Next.js, SQLite, Server-Sent Events, Expo staff app.</li>
+    <li><b>Khashab internal tools</b> (2025 to 2026): PHP admin panel issuing bilingual PDF job orders, and an Expo admin app.</li>
+    <li><b>Sky Land Developments</b> (2026): bilingual real-estate landing site, skylandeg.com. Next.js 16.</li>
+    <li><b>Programmatic video</b> (2026): Remotion and ElevenLabs pipelines that render vertical Arabic videos from data, 31 for ElMasareef.</li>
+  </ul>
+
+  <h2>Team projects</h2>
+  <p>Built with a partner developer for agency clients in the United States. My role: contributor.</p>
+  <ul class="small">
+    <li><b>Date &amp; Time, Official Rolex Retailer</b> (Shopify, Apr 2025 to May 2026): Rolex section built to Rolex's brand guidelines, with 17 sections and about 40 templates.</li>
+    <li><b>Comprehensive Orthopedic &amp; Spine Care</b> (2026): Joomla site moved to Next.js 16 and Payload CMS with 441 legacy URLs preserved.</li>
+    <li><b>ENT Specialists, ExecuSource, PRI Technology</b> (2026): Wix and WordPress sites rebuilt on Next.js, with job boards rendered on the server from Bullhorn and JobDiva.</li>
+  </ul>
+
+  <h2>Experience</h2>
+  <div class="two">
+    <div class="role">
+      <div class="proj-head"><h3>Full-stack developer, Khashab Furniture</h3><span class="when">Cairo · 2025 to present</span></div>
+      <p>Own the company's software end to end: store, checkout, customer portal, staff back office and finance module, plus hosting, CI and SEO.</p>
+    </div>
+    <div class="role" style="margin-top:0">
+      <div class="proj-head"><h3>Independent product developer</h3><span class="when">2026 to present</span></div>
+      <p>Design, build and run my own products (Reponelle, ElMasareef, FlamingoAtlas), and contribute to agency sites for US clients.</p>
+    </div>
+  </div>
+
+  <!-- Add an Education section here:
+  <h2>Education</h2>
+  <p><b>Degree</b>, University, year</p> -->
+</main>
+</body>
+</html>

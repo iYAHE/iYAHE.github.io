@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yasser Eissa · Full-stack developer</title>
+<meta name="description" content="Yasser Eissa is a full-stack app and web developer in Cairo. A network map of the products he has built with Next.js, React Native, PostgreSQL and Supabase.">
+<link rel="canonical" href="https://iyahe.github.io/">
+<meta property="og:url" content="https://iyahe.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Yasser Eissa · Full-stack developer">
+<meta property="og:description" content="Every station on this map is something I built.">
+<meta name="theme-color" content="#13203B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23D62839' stroke-width='6'/%3E%3Crect x='1' y='12' width='30' height='8' rx='2' fill='%2313203B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Readex+Pro:wght@400;500;600;700&family=Spline+Sans+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body id="top">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="plate" href="#top" aria-label="Yasser Eissa, home">
+      <span class="roundel" aria-hidden="true"><span>YE</span></span>
+      <span class="plate-name">Yasser Eissa <span class="ar" lang="ar" dir="rtl">ياسر عيسى</span></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#network">Network</a>
+      <a href="#lines">Lines</a>
+      <a href="#stations">Stations</a>
+      <a href="#record">Record</a>
+      <a href="#ticket">Contact</a>
+    </nav>
+    <button class="theme" id="theme" type="button" aria-pressed="false">Night service</button>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero wrap">
+  <p class="eyebrow">Full-stack app and web developer · Cairo</p>
+  <h1>Every station on this map is something I&nbsp;built.</h1>
+  <div class="hero-row">
+    <p class="lede">I'm Yasser Eissa. I take products from database schema to production: Next.js on the web, React Native on the phone, PostgreSQL underneath, and the deployment that keeps it all running. Pick a station to see the work.</p>
+    <div class="cta">
+      <a class="btn" href="#ticket">Get in touch</a>
+      <a class="btn ghost" href="cv.html">Read the CV</a>
+      <a class="btn ghost" href="https://github.com/iYAHE" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <ul class="facts" aria-label="At a glance">
+    <li><b>14</b> stations</li>
+    <li><b>5</b> lines</li>
+    <li><b>4</b> live products I run</li>
+    <li><b>2</b> languages by default, Arabic and English</li>
+  </ul>
+</section>
+
+<section class="network wrap" id="network" aria-labelledby="network-h">
+  <div class="sheet">
+    <div class="sheet-head">
+      <h2 id="network-h">Network map</h2>
+      <p class="hint">Select a station. Select a line to trace it.</p>
+    </div>
+    <div class="keys" id="keys" role="group" aria-label="Lines"></div>
+    <div class="map-scroll" tabindex="0" role="region" aria-label="Network map, scrolls sideways on small screens">
+      <svg id="map" viewBox="0 0 1064 624" role="group" aria-label="Project network map"></svg>
+    </div>
+    <ul class="legend" aria-label="Map key">
+      <li><span class="k k-live" aria-hidden="true"></span>In service (live)</li>
+      <li><span class="k k-build" aria-hidden="true"></span>Under construction (pre-launch)</li>
+      <li><span class="k k-x" aria-hidden="true"></span>Interchange (several skills)</li>
+      <li><span class="k k-joint" aria-hidden="true"></span>Joint service (team project)</li>
+    </ul>
+  </div>
+  <aside class="board" id="board" aria-live="polite" aria-label="Selected station"></aside>
+</section>
+
+<section class="wrap block" id="lines" aria-labelledby="lines-h">
+  <header class="block-head">
+    <h2 id="lines-h">Lines</h2>
+    <p>Each line is a skill I work in. A station sits on every line its project needed.</p>
+  </header>
+  <div class="lines" id="line-rows"></div>
+  <div class="depot">
+    <h3>The depot</h3>
+    <p class="depot-note">What keeps the trains running after launch.</p>
+    <dl id="depot-rows"></dl>
+  </div>
+</section>
+
+<section class="wrap block" id="stations" aria-labelledby="stations-h">
+  <header class="block-head">
+    <h2 id="stations-h">All stations</h2>
+    <p>Every project on the map, in one list.</p>
+  </header>
+  <ol class="timetable" id="timetable"></ol>
+</section>
+
+<section class="wrap block" id="record" aria-labelledby="record-h">
+  <header class="block-head">
+    <h2 id="record-h">Service record</h2>
+    <p>When each part of the network opened.</p>
+  </header>
+  <ol class="record" id="record-rows"></ol>
+</section>
+
+<section class="wrap block" id="ticket" aria-labelledby="ticket-h">
+  <div class="ticket">
+    <div class="ticket-main">
+      <p class="ticket-kicker">Single journey</p>
+      <h2 id="ticket-h">Your idea <span aria-hidden="true">→</span> production</h2>
+      <p class="ticket-copy">I'm looking for a full-stack role, web or mobile. Send me the job description or the problem and I'll reply with how I'd build it.</p>
+      <div class="mail">
+        <span class="mail-addr" id="mail-addr">yassereissa1308@gmail.com</span>
+        <button class="btn small" id="copy" type="button">Copy address</button>
+        <a class="btn small ghost" href="mailto:yassereissa1308@gmail.com">Open in mail</a>
+      </div>
+    </div>
+    <div class="ticket-stub">
+      <dl>
+        <div><dt>Issued in</dt><dd>Cairo, Egypt</dd></div>
+        <div><dt>Class</dt><dd>Full-stack</dd></div>
+        <div><dt>Code</dt><dd><a href="https://github.com/iYAHE" rel="noopener">github.com/iYAHE</a></dd></div>
+        <div><dt>Papers</dt><dd><a href="cv.html">CV</a> · <a href="Yasser-Eissa-CV.pdf" download>PDF</a></dd></div>
+      </dl>
+      <div class="barcode" aria-hidden="true"></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot wrap">
+  <p>Map not to scale. Drawn in SVG from one data file, with no framework.</p>
+  <p>© 2026 Yasser Eissa</p>
+</footer>
+
+<noscript><p class="wrap noscript">The network map needs JavaScript. The full project list is in the <a href="cv.html">CV</a>.</p></noscript>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
